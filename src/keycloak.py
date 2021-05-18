@@ -15,7 +15,7 @@ def laod_json(path):
 def get_token():
     url = f"{BASE_URL}/auth/realms/master/protocol/openid-connect/token"
 
-    realm = "6f548d5a-70d7-4ab1-acd1-a515c204307a"
+    realm = "e11b4d17-4278-433a-8b36-52abdb8fb0cf"
     username = "admin"
     password ="Pa55w0rd"
     client_id = "test"
@@ -76,7 +76,7 @@ def main():
 
     create_new_user("master", "test", get_token())
     max = 1100
-    start = 1000
+    start = 1
     while start<max:
         token = get_token()
         create_new_realm(str(start), str(start),  token)
